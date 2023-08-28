@@ -1,0 +1,15 @@
+{ns main
+ import #{aidbox config}
+
+ import-workers
+ {:zen/tags #{service}
+  :engine  awf.executor/task-executor-service-engine
+  :taskDefinitions [aidbox.bulk/import-resource-task]
+  :workers 8
+  :shutdown-timeout 1000}
+
+
+ box
+ {:zen/tags #{aidbox/system}
+  :zen/desc "Perf box"
+  :services {:import-workers import-workers}}}
