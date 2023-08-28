@@ -1,5 +1,5 @@
 {ns main
- import #{aidbox awf.executor aidbox.bulk service}
+ import #{aidbox awf.executor aidbox.bulk}
 
  import-workers
  {:zen/tags #{service}
