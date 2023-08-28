@@ -2,7 +2,7 @@
  import #{aidbox awf.executor aidbox.bulk}
 
  import-workers
- {:zen/tags #{service}
+ {:zen/tags #{aidbox/service}
   :engine  awf.executor/task-executor-service-engine
   :taskDefinitions [aidbox.bulk/import-resource-task]
   :workers 8
